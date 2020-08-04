@@ -1,0 +1,7 @@
+users:
+  - name: test
+    salt: f3c5ee9ece563a067141ddbef7d4d6e243008970cc35984148f6109d38d68494
+    hash: d45b1eb5f7016fa6aa214efa024d678dd18677e9f65e7fd13f68215fce93042f
+    roles:
+      - "USER"
+      - "TEST"

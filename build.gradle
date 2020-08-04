@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+}
+
+group 'dk.lbloft'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+project.ext {
+    dropwizardVersion = '2.0.1'
+}
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+dependencies {
+    compile 'io.dropwizard:dropwizard-core:' + dropwizardVersion
+    compile 'io.dropwizard:dropwizard-auth:' + dropwizardVersion
+    compile 'io.dropwizard:dropwizard-assets:' + dropwizardVersion
+    compile 'io.dropwizard:dropwizard-views-freemarker:' + dropwizardVersion
+    compile 'io.dropwizard:dropwizard-testing:' + dropwizardVersion
+    compile 'io.dropwizard:dropwizard-jersey:' + dropwizardVersion
+    compile 'io.dropwizard:dropwizard-validation:' + dropwizardVersion
+
+    compileOnly 'org.projectlombok:lombok:1.18.6'
+    annotationProcessor("org.projectlombok:lombok:1.18.6")
+    testAnnotationProcessor("org.projectlombok:lombok:1.18.6")
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
